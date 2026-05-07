@@ -63,9 +63,9 @@ npm run docs:dev
 
 Most contributions fall into one of these. Each has a docs page that walks through the change with a real example. Read the page before you write code.
 
-1. **New agents** — `src/agents/<role>.ts` + one entry in `src/agents/pipeline.ts`. See [extending/agents](https://brsoyan.github.io/agent-team/extending/agents).
-2. **New gate checks** — extend the `checks: GateCheck[]` array on the gatekeeper entry in `pipeline.ts`. See [extending/gates](https://brsoyan.github.io/agent-team/extending/gates).
-3. **New knowledge packs** — drop a markdown file under `data/global-knowledge/`. See [extending/knowledge-packs](https://brsoyan.github.io/agent-team/extending/knowledge-packs).
+1. **New knowledge packs** — *the easiest way to contribute*. Drop a markdown file under `data/global-knowledge/` to teach every agent a new SDK or design system. No code required. See [extending/knowledge-packs](https://brsoyan.github.io/agent-team/extending/knowledge-packs).
+2. **New agents** — `src/agents/<role>.ts` + one entry in `src/agents/pipeline.ts`. See [extending/agents](https://brsoyan.github.io/agent-team/extending/agents).
+3. **New gate checks** — extend the `checks: GateCheck[]` array on the gatekeeper entry in `pipeline.ts`. See [extending/gates](https://brsoyan.github.io/agent-team/extending/gates).
 4. **Project templates** — *currently a wanted feature, no plumbing yet.* If you want to champion this, open an issue first; the design needs to be agreed before code lands.
 
 ## Getting your PR reviewed

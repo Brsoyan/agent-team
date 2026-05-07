@@ -45,11 +45,11 @@ Full security notes: [FAQ → Security](https://brsoyan.github.io/agent-team/faq
 
 ## Extending
 
-The pipeline is one TypeScript array in [`src/agents/pipeline.ts`](src/agents/pipeline.ts). Four ways to contribute:
+The pipeline is one TypeScript array in [`src/agents/pipeline.ts`](src/agents/pipeline.ts). Four ways to contribute, easiest first:
 
-1. **[New agents](https://brsoyan.github.io/agent-team/extending/agents)** — add a security auditor, i18n localizer, or accessibility reviewer in 3 file edits.
-2. **[Quality-gate checks](https://brsoyan.github.io/agent-team/extending/gates)** — add ESLint, security scanners, bundle-size budgets.
-3. **[Knowledge packs](https://brsoyan.github.io/agent-team/extending/knowledge-packs)** — markdown context every agent sees.
+1. **[Knowledge packs](https://brsoyan.github.io/agent-team/extending/knowledge-packs)** — the easiest way to contribute. Drop a markdown file under `data/global-knowledge/` to add a new SDK or design system every agent will use. No code required.
+2. **[New agents](https://brsoyan.github.io/agent-team/extending/agents)** — add a security auditor, i18n localizer, or accessibility reviewer in 3 file edits.
+3. **[Quality-gate checks](https://brsoyan.github.io/agent-team/extending/gates)** — add ESLint, security scanners, bundle-size budgets.
 4. **[Project templates](https://brsoyan.github.io/agent-team/extending/templates)** — wanted feature, not yet built. Open an issue if you want to champion it.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow.
