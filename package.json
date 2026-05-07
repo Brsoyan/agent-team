@@ -1,0 +1,44 @@
+{
+  "name": "agent-team",
+  "version": "1.0.0",
+  "description": "Six AI agents that design, build, review, and test Expo apps together.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/brsoyan/agent-team#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brsoyan/agent-team.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brsoyan/agent-team/issues"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "claude-code",
+    "expo",
+    "react-native",
+    "multi-agent"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "api": "tsx src/index.ts dashboard",
+    "dev": "concurrently \"npm run api\" \"cd board && npm run dev\"",
+    "start": "tsx src/index.ts",
+    "board-cli": "tsx src/board-cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.10.0",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,0 +1,47 @@
+name: Feature request
+description: Suggest a change that isn't a new agent or a new gate check (those have their own templates / processes).
+title: "[feat]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Most "feature" requests for this project boil down to "add an agent", "add a gate check", or "add a knowledge pack" — those have dedicated paths in [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md). Use this template for things that don't fit those lanes (board UX, orchestrator behavior, CLI ergonomics, etc.).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Concrete user scenario, not abstract goodness.
+      placeholder: "When the QA agent files a bug, the developer can't tell from the board which screenshot it refers to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What should it look like? Sketches / mocks welcome. Don't worry about polishing the API — the discussion will refine it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: "Other ways to solve the problem and why they're worse."
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area?
+      options:
+        - "board (frontend)"
+        - "API (src/dashboard.ts)"
+        - "orchestrator (src/orchestrator.ts)"
+        - "agent prompts"
+        - "CLI (npm start)"
+        - "docs"
+        - "other"
+    validations:
+      required: true

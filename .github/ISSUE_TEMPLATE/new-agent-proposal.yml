@@ -1,0 +1,67 @@
+name: New agent proposal
+description: Propose a new agent role to add to the pipeline (e.g. security auditor, i18n localizer, accessibility reviewer).
+title: "[agent]: "
+labels: ["new-agent", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Adding an agent is a 3-step change in `src/agents/pipeline.ts` ([extending/agents docs](https://brsoyan.github.io/agent-team/extending/agents)). Open this issue *before* the PR so we can agree on scope, position in the pipeline, and naming.
+
+  - type: input
+    id: role
+    attributes:
+      label: Role identifier
+      description: "lowercase-kebab. Used as `assignee` on tasks. Examples: `security-auditor`, `i18n-localizer`, `a11y-reviewer`."
+      placeholder: "security-auditor"
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Agent's display name
+      description: A human first + last name. Each role has a name (Sarah Chen, Marcus Webb…) so users can refer to the agent naturally.
+      placeholder: "Alex Stein"
+    validations:
+      required: true
+
+  - type: textarea
+    id: job
+    attributes:
+      label: What does this agent do?
+      description: One paragraph. What does it pick up, what does it produce, what does it hand off?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: position
+    attributes:
+      label: Where does it sit in the pipeline?
+      options:
+        - "before pm"
+        - "between pm and critic"
+        - "between critic and designer"
+        - "between designer and developer"
+        - "between developer and gatekeeper"
+        - "between gatekeeper and reviewer"
+        - "between reviewer and qa"
+        - "after qa"
+        - "supervisor (runs before pipeline, like manager)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: handoff
+    attributes:
+      label: Handoff
+      description: "Status the agent sets when done, and which agent it forwards to."
+      placeholder: "On pass: status=`review_approved`, assignee=`qa`. On fail: status=`code_review`, assignee=`developer`."
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt-sketch
+    attributes:
+      label: System prompt sketch
+      description: "A few bullet points of what the prompt should emphasize. Don't write the full prompt yet — that goes in the PR."
